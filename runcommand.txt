@@ -1,0 +1,14 @@
+DappTokenSale.deployed().then(function(i){tokenSale=i;})
+tokenSale
+
+
+DappToken.deployed().then(function(i){token=i;})
+token
+
+
+tokensAvailable=750000
+
+admin = web3.eth.accounts[0]
+token.transfer(tokenSale.address, tokensAvailable, {from: admin})
+
+
